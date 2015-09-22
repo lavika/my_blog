@@ -1,0 +1,20 @@
+<% if false %>
+	<% @article.comments.each do |comment| %>
+<% end %>
+<% end %>
+
+
+<p><strong>
+	Commenter:
+</strong>
+<%= comment.commenter %>
+</p>
+<strong>
+	Commenter: </strong>
+<%= comment.body %>
+
+
+<% if false %>
+	<%= link_to "Destroy comment" , article_comment_path(comment), method: :delete, data: { confirm: "Are you sure?"} %>
+<% end %>
+

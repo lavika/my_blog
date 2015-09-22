@@ -25,7 +25,7 @@ class ArticlesController < ApplicationController
 		@article = Article.new(articles_params)
 
 		if @article.save  #@article is an instant object#returns true if there were no errors saving the article 
-			redirect_to @article 
+			redirect_to articles_path
 		else
 			render 'new'
 		end 
@@ -36,7 +36,6 @@ class ArticlesController < ApplicationController
 	
 	def update
  		 @article = Article.find(params[:id])
- 
   		if @article.update(articles_params)
     		redirect_to @article
   		else
